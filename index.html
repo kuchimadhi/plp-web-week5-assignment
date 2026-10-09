@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendWise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <p class="eyebrow">Personal Budget Tracker</p>
+        <h1>SpendWise</h1>
+      </header>
+
+      <section class="panel summary-panel">
+        <h2>Monthly Budget Summary</h2>
+        <div id="summary" class="summary-box">
+          Loading your budget summary...
+        </div>
+      </section>
+
+      <section id="budget-form-container" class="panel form-panel hidden">
+        <h2>Enter Your Budget</h2>
+        <form id="budget-form">
+          <label>
+            Monthly income
+            <input type="number" id="monthly-income" name="monthly-income" min="0" step="0.01" required />
+          </label>
+
+          <div id="expense-fields"></div>
+
+          <button type="submit">Calculate Budget</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

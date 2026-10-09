@@ -1,0 +1,133 @@
+:root {
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --primary: #1f6feb;
+  --primary-dark: #1349a8;
+  --text: #1d2a39;
+  --muted: #5d6b7a;
+  --accent: #dfeeff;
+  --success: #1f9d61;
+  --shadow: rgba(31, 111, 235, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #edf5ff 0%, #f9fbff 100%);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(90vw, 720px);
+  padding: 32px 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--primary-dark);
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 18px;
+  box-shadow: 0 15px 35px var(--shadow);
+  padding: 24px;
+}
+
+.summary-panel h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.summary-box {
+  background: var(--accent);
+  border-radius: 12px;
+  padding: 18px;
+  line-height: 1.8;
+  font-size: 1rem;
+  white-space: pre-line;
+}
+
+.form-panel {
+  margin-top: 28px;
+}
+
+.hidden {
+  display: none;
+}
+
+#budget-form {
+  display: grid;
+  gap: 16px;
+}
+
+#budget-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: bold;
+}
+
+#budget-form input,
+#budget-form button {
+  font: inherit;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #cad8ee;
+}
+
+#budget-form input {
+  background: #f8fbff;
+}
+
+#budget-form button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#budget-form button:hover {
+  background: var(--primary-dark);
+}
+
+.expense-group {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+strong {
+  color: var(--primary-dark);
+}
+
+.amount-positive {
+  color: var(--success);
+  font-weight: bold;
+}
+
+.amount-negative {
+  color: #a33a3a;
+  font-weight: bold;
+}
